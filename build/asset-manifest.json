@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.447646b0.css",
+    "main.js": "/static/js/main.97a425d9.js",
+    "static/media/bam.mpga": "/static/media/bam.a137c2de95ad86d92d76.mpga",
+    "static/media/bass.mp3": "/static/media/bass.2f1612506155dfa431b4.mp3",
+    "static/media/boom.mpga": "/static/media/boom.2f1612506155dfa431b4.mpga",
+    "static/media/holdme.mp3": "/static/media/holdme.9ef2dd2d3c56f8477761.mp3",
+    "static/media/kick.mp3": "/static/media/kick.d5a4ed1ab26c5694aff4.mp3",
+    "static/media/latini.mp3": "/static/media/latini.30b19606c227b8d4a933.mp3",
+    "static/media/lovefunk.mp3": "/static/media/lovefunk.90f2d7a349c5081bf0b2.mp3",
+    "static/media/picut.mp3": "/static/media/picut.4b295543efc83ebe0e9d.mp3",
+    "static/media/zulu.mp3": "/static/media/zulu.7a61f37df18a9547b10b.mp3",
+    "static/media/digital-7.ttf": "/static/media/digital-7.93911ab167c943140756.ttf",
+    "index.html": "/index.html",
+    "main.447646b0.css.map": "/static/css/main.447646b0.css.map",
+    "main.97a425d9.js.map": "/static/js/main.97a425d9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.447646b0.css",
+    "static/js/main.97a425d9.js"
+  ]
+}
