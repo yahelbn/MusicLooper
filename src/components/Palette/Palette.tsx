@@ -28,7 +28,9 @@ const Palette = (props: PaletteProps): JSX.Element => {
     if (playAll) {
       interval = setInterval(() => {
         setSeconds(seconds => seconds + 1);
-        if(seconds===8){ 
+        if(seconds===8)
+        { 
+          clearInterval(interval);
           reset();
           setPlayingSounds([...playingSounds,...waitingSounds]);
           playAllSounds([...playingSounds,...waitingSounds])
@@ -61,13 +63,12 @@ const Palette = (props: PaletteProps): JSX.Element => {
     let playing:AudioInterface[] = [];
     soundsStack.map((sound)=> sound.padsIsOn ? playing.push({id:sound.id ,audio : new Audio(sound.sound)}) : null)    
     setPlayingSounds([...playing])
-    console.log(playing)
     return playing;
   }
 
   //Pads that padIsOn=true  play them.
   const playAllSounds = (playing:AudioInterface[]) =>{
-    playing.forEach(sound =>  {sound.audio.play(); 
+    playing.forEach(sound =>  {sound.audio.play(); sound.audio.loop=true;
     })
   }
 
@@ -84,6 +85,7 @@ const Palette = (props: PaletteProps): JSX.Element => {
       playingSounds.forEach((sound,index)=>{
         if(sound.id===id){
           sound.audio.pause()
+          sound.audio.loop=false;
           playingSounds.splice(index,1)
         }
       })
@@ -91,7 +93,6 @@ const Palette = (props: PaletteProps): JSX.Element => {
       let objIndex = soundsStack.findIndex((obj => obj.id === id));
       soundsStack[objIndex].padsIsOn = false
       setSoundsStack([...soundsStack]);
-      console.log(soundsStack)
   }
 
   //If the sound is "on" while clicking on specific pad , we supposed to add the sound to stack of "waitingSounds"
